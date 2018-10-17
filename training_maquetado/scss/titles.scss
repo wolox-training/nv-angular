@@ -1,0 +1,17 @@
+.title-container {
+    display:flex;
+    align-items: center;
+}
+
+.title {
+    color: black;
+    font-family: $roboto;
+    font-size: $text-big;
+    position: absolute;
+    padding-left: $title-decoration-width - 20px;
+} 
+
+.triangle {
+    height: $title-decoration-height; 
+    width: $title-decoration-width;
+}

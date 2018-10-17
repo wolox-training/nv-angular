@@ -1,0 +1,51 @@
+.tech-container {
+    display: flex;
+    align-items: center;
+    background-color: $green;
+    height: 300px;
+    flex-direction: column;
+    position: relative;
+    width: 200px;
+}
+
+.tech-container,
+.tech-container:before {
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tech-container:before {
+    border: 1px solid $green;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.tech-icon {
+    height: $tech-logo-size;
+    margin: 4px 0;
+    width: $tech-logo-size;
+}
+
+.tech-title, 
+.tech-release, 
+.tech-desc {
+    font-size: $text-medium;
+    margin: 4px 0;
+    text-align: center;
+}
+
+.tech-release {
+    font-weight: bold;
+}
+
+.tech-desc {
+    margin: 12px 0;
+}
+
+
