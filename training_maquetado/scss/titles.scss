@@ -1,5 +1,5 @@
 .title-container {
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -8,10 +8,10 @@
     font-family: $roboto;
     font-size: $text-big;
     position: absolute;
-    padding-left: $title-decoration-width - 20px;
+    padding-left: 50px;
 } 
 
-.triangle {
+.triangle-decorator {
     height: $title-decoration-height; 
     width: $title-decoration-width;
 }
