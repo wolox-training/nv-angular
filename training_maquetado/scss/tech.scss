@@ -15,7 +15,7 @@
     box-sizing: border-box;
 }
 
-.tech-container:before {
+.tech-container::before {
     border: 1px solid $green;
     content: "";
     display: block;
@@ -25,6 +25,12 @@
     top: -10px;
     width: 100%;
     z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.tech-container:hover::before {
+    left: 10px;
+    top: 10px;
 }
 
 .tech-icon {
