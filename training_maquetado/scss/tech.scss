@@ -4,6 +4,7 @@
     background-color: $green;
     height: 300px;
     flex-direction: column;
+    margin: 10px 4px;
     position: relative;
     width: 200px;
 }
@@ -46,4 +47,14 @@
 
 .tech-desc {
     margin: 12px 0;
+}
+
+.tech-grid {
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto 80px;
+    width: 50%;
 }
