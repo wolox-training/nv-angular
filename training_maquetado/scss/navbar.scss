@@ -1,0 +1,24 @@
+.navbar-container {
+  background-color: white;
+  display: flex;
+  height: $nav-height;
+  box-shadow: 2px 4px 8px silver;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 15%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+  
+
+.logo-color {
+  height: $nav-logo-height; 
+}
+
+.navbar-title {
+  font-family: $roboto;
+  font-size: $text-big;
+}
