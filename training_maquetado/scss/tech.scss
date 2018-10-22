@@ -6,6 +6,7 @@
   height: 300px;
   position: relative;
   width: 200px;
+    
     &::before {
       border: 1px solid $green;
       content: "";
@@ -16,6 +17,7 @@
       width: 100%;
       z-index: -1;
     }
+    
     &,
     &::before {
       border-radius: 10px;
