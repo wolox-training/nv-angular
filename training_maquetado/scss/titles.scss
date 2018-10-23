@@ -7,15 +7,12 @@
   display: flex;
   font-size: $text-big;
   height: $title-decoration-height;
+  margin: 0 325px;
    
-    &,
-    &::before {
-        padding: 5% 20%;
-    }
-    
     &::before {
       content: url('assets/triangle.svg'); 
       left: -52px;
+      margin: inherit;
       position: absolute;
       width: $title-decoration-width;
       z-index: -1;

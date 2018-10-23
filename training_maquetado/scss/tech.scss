@@ -1,15 +1,26 @@
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 350px 80px;
+}
+
 .tech-container {
   align-items: center;
   background-color: $green;
+  border-radius: 7px; 
   display: flex;
   flex-direction: column;
-  height: 350px;
-  padding: 12px 12px;
+  justify-content: center;
+//   padding: 12px 12px;
+  margin: 30px 0;
+  min-height: 350px;
   position: relative;
   width: 230px;
-    
+
     &::before {
       border: 1px solid $green;
+      border-radius: inherit; 
       content: "";
       height: 100%;
       left: -10px;
@@ -17,13 +28,6 @@
       top: -10px;
       width: 100%;
       z-index: -1;
-    }
-    
-    &,
-    &::before {
-      border-radius: 6px;
-      box-sizing: border-box;
-      margin: 2% 0;
     }
 }
 
@@ -36,27 +40,10 @@
 .tech-release, 
 .tech-desc {
   font-size: $text-medium;
+  margin: 10px 0;
   text-align: center;
 }
 
 .tech-release {
   font-weight: bold;
-}
-
-.tech-title {
-  margin: 12px 0;
-}
-
-.tech-desc {
-  margin: 12px 0;
-}
-
-.tech-grid {
-  align-content: space-between;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto 80px;
-  width: 55%;
 }
