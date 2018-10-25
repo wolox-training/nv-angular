@@ -1,19 +1,20 @@
-.title-container {
-    align-items: center;
-    display: flex;
-    margin: 80px auto 20px;
-    width: 60%;
+*{
+  font-family: $roboto;
 }
 
 .title {
-    color: black;
-    font-family: $roboto;
-    font-size: $text-big;
-    position: absolute;
-    padding-left: 50px;
+  align-items: center;
+  display: flex;
+  font-size: $text-big;
+  height: $title-decoration-height;
+  margin-left: 322px;
+  padding-top: 160px;
+   
+    &::before {
+      content: url('assets/triangle.svg'); 
+      left: 270px;
+      position: absolute;
+      width: $title-decoration-width;
+      z-index: -1;
+    }
 } 
-
-.triangle-decorator {
-    height: $title-decoration-height; 
-    width: $title-decoration-width;
-}
