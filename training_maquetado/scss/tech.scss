@@ -47,3 +47,25 @@
   justify-content: center;
   width: 100%;
 }
+
+@media only screen and (max-width: 1024px) {
+  .tech-grid {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+  }
+
+  .tech-container {
+    border-bottom: 2px solid $green;
+    height: 350px;
+    width: 200px;  
+  }
+
+  .first-tech {
+    border-right: none;
+  }
+
+  .last-tech {
+    border-bottom: none;
+  }
+}

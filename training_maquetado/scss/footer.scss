@@ -19,3 +19,10 @@
   color: white;
   font-size: $text-small;
 }
+
+@media only screen and (max-width: 1024px) {
+  .copyright-text {
+    align-self: center;
+    margin: 40px 0;
+  }
+}
