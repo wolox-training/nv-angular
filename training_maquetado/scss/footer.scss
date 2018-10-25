@@ -1,21 +1,24 @@
 .footer-container {
+  align-items: center;
   background-color: $blue;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 2% 15% 1%;
+  padding: 45px 300px 25px;
 }
 
 .footer-text { 
-  color: white;
+  color: $white;
   font-size: $text-big;
   margin: 10px 0;
 }
 
+.logo-white {
+  min-width: 400px;
+}
+
 .copyright-text {
   align-self: flex-end;
-  color: white;
+  color: $white;
   font-size: $text-small;
 }
