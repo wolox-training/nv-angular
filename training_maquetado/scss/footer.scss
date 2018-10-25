@@ -8,7 +8,7 @@
 }
 
 .footer-text { 
-  color: white;
+  color: $white;
   font-size: $text-big;
   margin: 10px 0;
 }
@@ -19,6 +19,6 @@
 
 .copyright-text {
   align-self: flex-end;
-  color: white;
+  color: $white;
   font-size: $text-small;
 }
