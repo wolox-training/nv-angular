@@ -24,7 +24,7 @@
     const store = this;    
     store.products = books;
         
-    store.searchBook = function() {
+    store.searchBook = () => {
       store.products = books;
       if(store.searchBox) {
         if(store.filterValue === 'title') {
