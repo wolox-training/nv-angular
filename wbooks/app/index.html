@@ -8,28 +8,12 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="application.css" />
   <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="angular-ui-router.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-app="store">
-  <div ng-controller="StoreController as store">
-    <div class="search">
-      <select class="filter" name="filter" ng-model="store.filterValue">
-          <option value="" selected disabled hidden>Seleccionar filtro</option>
-          <option value="title">Título</option>
-          <option value="author">Autor</option>
-      </select>
-      <input class="filter" placeholder="Buscar..." ng-model="store.searchBox"/>
-      <button class="search-icon" alt="Search" ng-click="store.searchBook()"/>
-    </div>
-    <div class="book-grid">
-      <h1 class="msg-noresults" ng-hide="store.products[0]">No hay resultados para su búsqueda.</h1>
-      <div ng-repeat="product in store.products" class="book-container">
-        <img class="default-img" ng-hide="product.image_url" src="assets/images/default_book.svg" alt="Default book cover"/>
-        <img class="cover-img" ng-show="product.image_url" src="{{product.image_url}}" alt="Book cover"/>    
-        <h1 class="book-title">{{product.title}}</h1>
-        <h2 class="book-author">{{product.author}}</h2>
-      </div>
-    </div> 
-</div>
+<body ng-app="store">  
+  <a ui-sref="dashboard"></a>
+
+  <ui-view></ui-view>
 </body>
 </html>

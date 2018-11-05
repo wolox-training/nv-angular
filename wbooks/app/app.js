@@ -1,6 +1,25 @@
 (function(){
-  const app = angular.module('store',[]);
+  const app = angular.module('store', ['ui.router']);
+  
+  app.config(function($stateProvider){
+    const dashboardState = {
+      name: 'dashboard',
+      url: '/dashboard',
+      templateUrl: './pages/dashboard.html',
+      controller: 'StoreController as store'
+    };
 
+    const detailState = {
+      name: 'detail',
+      url: '/detail',
+      templateUrl: './pages/detail.html',
+      controller: 'BookController as book'
+    };
+
+    $stateProvider.state(dashboardState);
+    $stateProvider.state(detailState);
+  });
+  
   app.controller('StoreController', function(){
     const store = this;    
     store.products = books;
@@ -17,6 +36,38 @@
     };
   });
 
+  app.controller('BookController', function(){
+    const book = this;    
+    book.copy = copy;
+
+    book.comments= comments;
+  });  
+
+  let copy = {
+    "id": 1,
+    "author": "Autor",
+    "title": "Título",
+    "genre": "Temática",
+    "publisher": "Editorial",
+    "year": "Año",
+    "image_url": null,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  }
+
+  let comments = [{
+    "id": 1,
+    "image_profile": null,
+    "user": "Nico Vescio",
+    "date": "xx/xx/xx",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 2,
+    "image_profile": null,
+    "user": "Nico Vescio",
+    "date": "xx/xx/xx",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." 
+  }]
 
   let books = [
     {

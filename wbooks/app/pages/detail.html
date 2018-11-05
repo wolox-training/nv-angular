@@ -1,0 +1,43 @@
+<div>
+  <a ui-sref="dashboard"  class="link"><p class='return'>< Volver</p></a>
+  <div class="detail-container">
+    <div class="detail-img">
+      <img class="detail-default-img" ng-hide="book.copy.image_url" src="assets/images/default_book.svg" alt="Default book cover"/>
+      <img class="detail-cover-img" ng-show="book.copy.image_url" src="{{book.copy.image_url}}" alt="Book cover"/>
+    </div>
+    <div class="detail-data">
+      <h1 class="detail-title">{{book.copy.title}}</h1>
+      <h2 class="detail-author">{{book.copy.author}}</h2>
+      <h2 class="detail-year">{{book.copy.year}}</h2>
+      <h2 class="detail-genre">{{book.copy.genre}}</h2>
+      <p class="detail-desc">{{book.copy.description}}</p>
+      <button class="detail-btn">Alquilar</button>
+    </div>
+  </div>
+  <div class="suggestions-container">
+    <h1 class="section-title">Sugerencias</h1>
+    <img class="suggest-default-img" src="assets/images/default_book.svg" alt="Default book cover"/>
+    <img class="suggest-default-img" src="assets/images/default_book.svg" alt="Default book cover"/>
+    <img class="suggest-default-img" src="assets/images/default_book.svg" alt="Default book cover"/>
+    <img class="suggest-default-img" src="assets/images/default_book.svg" alt="Default book cover"/>
+  </div>
+  <div class="comments-container">
+    <h1 class="section-title">Comentarios</h1>
+    <div class="add-comment-container">
+      <img class="profile-photo" src="assets/images/profile.jpg" alt="Profile photo" />
+      <div class="add-comment">
+        <p class="comment-title">Agregar comentario</p>
+        <textarea class="comment-textarea"></textarea>
+        <button class="comment-btn">Enviar</button>
+      </div>
+    </div>
+    <div ng-repeat="comment in book.comments" class="book-comments">
+        <img class="profile-photo" src="assets/images/profile.jpg" alt="Profile photo"/>
+        <div class="comment-data">
+          <h1 class="comment-user">{{comment.user}}</h1>
+          <p class="comment-date">{{comment.date}}</p>
+          <p class="comment-text">{{comment.text}}</p>
+        </div>
+    </div>
+  </div>
+</div>
