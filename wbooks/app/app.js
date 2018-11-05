@@ -8,11 +8,7 @@
     store.searchBook = function() {
       store.products = books;
       if(store.searchBox) {
-        if(store.filterValue === 'title') {
-          store.products = store.products.filter(book => book.title.toLowerCase().indexOf(store.searchBox.toLowerCase()) > -1);  
-        } else if(store.filterValue === 'author') {
-          store.products = store.products.filter(book => book.author.toLowerCase().indexOf(store.searchBox.toLowerCase()) > -1);  
-        }
+          store.products = store.products.filter(book => book[store.filterValue].toLowerCase().indexOf(store.searchBox.toLowerCase()) > -1);  
       }
     };
   });
