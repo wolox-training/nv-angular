@@ -16,8 +16,16 @@
       controller: 'BookController as book'
     };
 
+    const signupState = {
+      name: 'signup',
+      url: '/signup',
+      templateUrl: './pages/signup.html',
+      controller: 'SignupController as signup'      
+    };
+
     $stateProvider.state(dashboardState);
     $stateProvider.state(detailState);
+    $stateProvider.state(signupState);
   });
   
   app.controller('StoreController', function(){
@@ -41,6 +49,22 @@
     book.copy = copy;
 
     book.comments= comments;
+  });  
+
+  app.controller('SignupController', function(){
+    const signup = this;
+    var form = document.getElementById('signup-form');
+
+    window.onclick = function(event) {
+      if (event.target == form) {
+        form.style.display = "none";
+      }
+    };
+
+    signup.redirect = () => {
+      window.location.href = "/#!/dashboard";
+    };
+
   });  
 
   let copy = {
