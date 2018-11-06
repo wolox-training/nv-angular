@@ -12,24 +12,24 @@
 </head>
 <body ng-app="store">
   <div ng-controller="StoreController as store">
-    <div class="search">
+    <form class="search" ng-submit="store.searchBook()">
       <select class="filter" name="filter" ng-model="store.filterValue">
           <option value="" selected disabled hidden>Seleccionar filtro</option>
           <option value="title">Título</option>
           <option value="author">Autor</option>
       </select>
       <input class="filter" type="text" placeholder="Buscar..." ng-model="store.searchBox"/>
-      <button class="search-icon" alt="Search" ng-click="store.searchBook()"/>
-    </div>
+      <button class="search-icon" type="submit" alt="Search"></button>
+    </form>
     <div class="book-grid">
-      <h1 class="msg-noresults" ng-hide="store.products[0]">No hay resultados para su búsqueda.</h1>
-      <div ng-repeat="product in store.products" class="book-container">
+      <h1 class="msg-noresults" ng-hide="store.filteredProducts[0]">No hay resultados para su búsqueda.</h1>
+      <div ng-repeat="product in store.filteredProducts" class="book-container">
         <img class="default-img" ng-hide="product.image_url" src="assets/images/default_book.svg" alt="Default book cover"/>
         <img class="cover-img" ng-show="product.image_url" src="{{product.image_url}}" alt="Book cover"/>    
         <h1 class="book-title">{{product.title}}</h1>
         <h2 class="book-author">{{product.author}}</h2>
       </div>
     </div> 
-</div>
+  </div>
 </body>
 </html>

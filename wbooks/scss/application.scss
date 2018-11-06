@@ -13,11 +13,10 @@
 
 .filter {
   background: none;
-  border: none; 
+  border: 0; 
   font-size: 14px;
   height: 38px;
   margin-right: 28px;
-  outline: none;
   width: 238px;
 }
 
@@ -26,18 +25,18 @@
   background-image: url('assets/images/search.svg');
   background-position: center;
   background-repeat: no-repeat;
-  border: none;
+  border: 0;
   cursor: pointer;
   height: 38px;
-  padding: 8px 6px 6px 8px;
+  padding: 8px 6px;
   width: 38px;
 }
 
 //BOOK GRID
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(4,130px);
-  grid-template-rows: repeat(3,220px);
+  grid-template-columns: repeat(4, 130px);
+  grid-template-rows: repeat(3, 220px);
   grid-gap: 65px 74px;
   justify-content: center;
   margin-top: 65px;
