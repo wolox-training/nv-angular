@@ -23,15 +23,13 @@
   app.controller('StoreController', function(){
     const store = this;    
     store.products = books;
+    store.filteredProducts = store.products;
         
     store.searchBook = function() {
-      store.products = books;
-      if(store.searchBox) {
-        if(store.filterValue === 'title') {
-          store.products = store.products.filter(book => book.title.toLowerCase().indexOf(store.searchBox.toLowerCase()) > -1);  
-        } else if(store.filterValue === 'author') {
-          store.products = store.products.filter(book => book.author.toLowerCase().indexOf(store.searchBox.toLowerCase()) > -1);  
-        }
+      if(store.searchBox && store.filterValue) {
+        store.filteredProducts = store.products.filter(book => book[store.filterValue].toLowerCase().indexOf(store.searchBox.toLowerCase()) > -1);
+      } else {
+        store.filteredProducts = store.products;     
       }
     };
   });
