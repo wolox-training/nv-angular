@@ -1,6 +1,6 @@
 //RETURN
 .return {
-  color: #4a4a4a;
+  color: $darkgrey;
   font-size: 12px;
   letter-spacing: 0px;
   line-height: 19px;
@@ -11,7 +11,7 @@
 //DETAIL
 .detail-container {
   align-items: center;
-  border-bottom: 2px solid #00adee;
+  border-bottom: 2px solid $lightblue;
   display: flex;
   justify-content: center;
   margin: auto auto;
@@ -27,7 +27,7 @@
   width: 565px;
   height: 272px;
     & h2 {
-      color: #4a4a4a;
+      color: $darkgrey;
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0px;
@@ -35,7 +35,7 @@
 }
 
 .detail-default-img {
-  background-color: #d8d8d8;
+  background-color: $grey;
   padding: 82px 41px;
   height: 111px;
   width: 111px;
@@ -49,7 +49,6 @@
 .detail-title {
   font-weight: bold;
   font-size: 20px;
-  color: #000000;
   letter-spacing: 0px;
   line-height: 19px;
   margin-top: 0;
@@ -73,16 +72,16 @@
 
 .detail-desc {
   font-size: 14px;
-  color: #999999;
+  color: $dustygrey;
   line-height: 19px;
   margin-top: 0;
   margin-bottom: 44px;
 }
 
 .detail-btn {
-  background: #00adee;
-  border: none;
-  color:#ffffff;
+  background: $lightblue;
+  border: 0;
+  color: $white;
   height: 38px;
   font-size:20px;
   font-weight: bold;
@@ -91,7 +90,7 @@
 
 //SUGERENCIAS
 .suggestions-container {
-  border-bottom: 2px solid #00adee;
+  border-bottom: 2px solid $lightblue;
   margin: auto auto;
   padding: 31px 0;
   width: 799px;
@@ -100,12 +99,12 @@
 .section-title{
   font-weight: bold;
   font-size: 20px;
-  color: #a5cd39;
+  color: $green;
   line-height: 19px;
 }
 
 .suggest-default-img {
-  background-color: #d8d8d8;
+  background-color: $grey;
   height: 54px;
   width: 54px;
   padding: 35px 15px;
@@ -129,7 +128,6 @@
 
 .add-comment-container {
   display: flex;
-  flex-direction: row;
   margin-left: 38px;
 }
 
@@ -149,7 +147,7 @@
 }
 
 .comment-textarea {
-  border: 1px solid #979797;
+  border: 1px solid $dustygrey;
   height: 73px;
   margin-bottom: 15px;
   resize: none;
@@ -157,9 +155,9 @@
 }
 
 .comment-btn {
-  background: #a5cd39;
-  border: none;
-  color: white;
+  background: $green;
+  border: 0;
+  color: $white;
   font-size: 16px;
   font-weight: bold;
   height: 38px;
@@ -169,7 +167,6 @@
 ////COMENTARIOS AGREGADOS
 .book-comments {
   display: flex;
-  flex-direction: row;
   margin-left: 38px;
   margin-top: 25px;
 }
@@ -182,7 +179,6 @@
 .comment-user {
   font-weight: bold;
   font-size: 14px;
-  color: #000000;
   letter-spacing: 0px;
   line-height: 19px;
   margin: 0;
@@ -191,7 +187,7 @@
 .comment-date {
   font-weight: 500;
   font-size: 12px;
-  color: #4a4a4a;
+  color: $darkgrey;
   letter-spacing: 0px;
   line-height: 19px;
   margin: 0;
@@ -200,7 +196,7 @@
 .comment-text {
   font-weight: 500;
   font-size: 14px;
-  color: #999999;
+  color: $dustygrey;
   line-height: 19px;
   margin-top: 11px;
   width: 679px;

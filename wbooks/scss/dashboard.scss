@@ -2,7 +2,6 @@
 .search {
   align-items: center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -12,30 +11,27 @@
   font-size: 14px;
   height: 38px;
   margin-right: 28px;
-  outline: none;
   width: 238px;
 }
 
 .search-icon {
-  background-color: #a5cd39;
+  background-color: $green;
   background-image: url('assets/images/search.svg');
   background-position: center;
   background-repeat: no-repeat;
-  border: none;
+  border: 0;
   cursor: pointer;
   height: 38px;
-  padding: 8px 6px 6px 8px;
+  padding: 8px 6px;
   width: 38px;
-    &:focus {
-      outline: 0;
-    }
+
 }
 
 //BOOK GRID
 .book-grid {
   display: grid;
-  grid-template-columns: 130px 130px 130px 130px;
-  grid-template-rows: 220px 220px 220px;
+  grid-template-columns: repeat(4, 130px);
+  grid-template-rows: repeat(3, 220px);
   grid-gap: 65px 74px;
   margin-top: 65px;
   justify-content: center;
@@ -46,7 +42,7 @@
 }
 
 .default-img {
-  background-color: #d8d8d8;
+  background-color: $grey;
   padding: 54px 26px;
 }
 
@@ -64,14 +60,14 @@
 }
 
 .book-author {
-  color: #4a4a4a;
+  color: $darkgrey;
   font-size: 12px;
   letter-spacing: 0px;
   line-height: 19px;
 } 
 
 .msg-noresults {
-  color: grey;
+  color: $grey;
   font-size: 16px;
   font-style: italic;
   grid-column-end: 5;
