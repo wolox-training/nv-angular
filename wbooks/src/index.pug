@@ -1,15 +1,14 @@
-doctype 
-html
+doctype html
+html(lang='en')
   head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title Page Title
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
-    link(rel='stylesheet', type='text/css', media='screen', href='application.css')
-    script(type='text/javascript', src='angular.min.js')
-    script(type='text/javascript', src='angular-ui-router.js')
-    script(type='text/javascript', src='app.js')
-  body(ng-app='store')
-    a(ui-sref='dashboard')
-    ui-view
+    title WBooks
+    meta(charset='UTF-8')
+    meta(name='viewport'
+      content='width=device-width, initial-scale=1')
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')  
+    link(href='/css/application.css' rel='stylesheet')
+    base(href='/')
+  body(ng-app='store' ng-strict-di)
+    div(ui-view='main')
+    // inject:js
+    // endinject

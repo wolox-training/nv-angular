@@ -1,0 +1,19 @@
+div
+  .search
+    select.filter(name='filter', ng-model='dashboard.filterValue')
+      option(value='', selected='', disabled='', hidden='') Seleccionar filtro
+      option(value='title') Título
+      option(value='author') Autor
+    input.filter(placeholder='Buscar...', ng-model='dashboard.searchBox')
+    button.search-icon(alt='Search', ng-click='dashboard.searchBook()')
+  .book-grid
+    h1.msg-noresults(ng-hide='dashboard.filteredProducts[0]') No hay resultados para su búsqueda.
+    .book-container(ng-repeat='product in dashboard.filteredProducts')
+      a.link(ui-sref="centered.detail")
+        img.default-img(ng-hide='product.image_url', src='assets/default_book.svg', alt='Default book cover')
+      a.link(ui-sref="centered.detail")
+        img.cover-img(ng-show='product.image_url', src='{{product.image_url}}', alt='Book cover')
+      a.link(ui-sref="centered.detail")
+        h1.book-title {{product.title}}
+      a.link(ui-sref="centered.detail")
+        h2.book-author {{product.author}}

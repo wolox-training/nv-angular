@@ -1,7 +1,6 @@
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
-@import 'dashboard.scss';
-@import 'detail.scss';
-@import 'signup.scss';
+@import 'variables/colors';
+@import 'base';
+@import '../app/components/centered/dashboard/dashboard.scss';
+@import '../app/components/centered/detail/detail.scss';
+@import '../app/components/centered/signup/signup.scss';
+@import '../app/components/centered/login/login.scss';
