@@ -1,0 +1,21 @@
+<form class="form-container" [formGroup]="regForm" (ngSubmit)="registerUser(regForm.value)">
+  <img src="../assets/wolox-books.png" alt="Wolox Logo">
+  <label>First name</label>
+  <input type="text" formControlName="first_name">
+  <div class="alert" *ngIf="!regForm.controls['first_name'].valid && regForm.controls['first_name'].touched">Este campo es obligatorio</div>
+  <label>Last name</label>
+  <input type="text" formControlName="last_name">
+  <div class="alert" *ngIf="!regForm.controls['last_name'].valid && regForm.controls['last_name'].touched">Este campo es obligatorio</div>  
+  <label>Email</label>
+  <input type="text" formControlName="email">
+  <div class="alert" *ngIf="!regForm.controls['email'].valid && regForm.controls['email'].touched">Este campo es obligatorio</div>
+  <label>Password</label>
+  <input type="password" formControlName="password">
+  <div class="alert" *ngIf="!regForm.controls['password'].valid && regForm.controls['password'].touched">Este campo es obligatorio</div>
+  <label>Password Confirmation</label>
+  <input type="password" formControlName="password_confirmation">
+  <div class="alert" *ngIf="!regForm.controls['password_confirmation'].valid && regForm.controls['password_confirmation'].touched">Este campo es obligatorio</div>
+  <button type="submit" class="signup-btn" [disabled]="!regForm.valid">Sign up</button>
+  <hr class="line">
+  <button type="button" class="login-btn">Login</button>
+</form>

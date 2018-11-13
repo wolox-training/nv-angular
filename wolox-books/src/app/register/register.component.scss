@@ -1,0 +1,65 @@
+@import '../../styles';
+
+.form-container {
+  border-top: 4px solid $wolox-blue;
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto;
+  padding: 20px;
+  width: 280px;
+
+  & img {
+    width: 250px;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+
+  & label {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  & input {
+    border: 0;
+    height: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+.signup-btn {
+  background-color: $wolox-green;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.login-btn {
+  background-color: $white;
+  border: 2px solid $wolox-green;
+  border-radius: 5px;
+  color: $wolox-green;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.line {
+  border: 1px solid $grey;
+  margin: 25px 0;
+}
+
+.alert {
+  background-color: $red;
+  border-radius: 3px;
+  color: $white;
+  display: inline-block;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 4px;
+  width: fit-content;
+}
