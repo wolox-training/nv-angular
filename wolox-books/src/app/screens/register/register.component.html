@@ -1,5 +1,5 @@
 <form class="form-container" [formGroup]="regForm" (ngSubmit)="registerUser(regForm.value)">
-  <img class="wolox-logo" src="../assets/wolox-books.png" alt="Wolox Logo">
+  <img class="wolox-logo" src="../../assets/wolox-books.png" alt="Wolox Logo">
   <label class="form-label">First name</label>
     <input class="form-input" type="text" formControlName="first_name">
     <div class="alert" *ngIf="!regForm.controls['first_name'].valid && regForm.controls['first_name'].touched">Este campo es obligatorio</div>

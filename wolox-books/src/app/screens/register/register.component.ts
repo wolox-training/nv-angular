@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { email, password, name } from '../validators';
+import { email, password, name } from '../../validators';
 
 @Component({
   selector: 'app-register',
