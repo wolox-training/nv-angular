@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { email, password, name } from '../validators';
 
 @Component({
   selector: 'app-register',
@@ -7,22 +8,19 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   regForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.regForm = fb.group({
-      "email": [null, Validators.compose([Validators.required])],
-      "password": [null, Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(32)])],
-      "password_confirmation": [null, Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(32)])],
-      "first_name": [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-      "last_name": [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+      "email": email,
+      "password": password,
+      "password_confirmation": password,
+      "first_name": name,
+      "last_name": name,
       "locale": "en"
-    })
-  }
-
-  ngOnInit() {
+    });
   }
 
   registerUser = (newUser) => {
