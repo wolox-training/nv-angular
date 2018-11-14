@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { email, password, name } from '../../validators';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -11,8 +14,15 @@ import { email, password, name } from '../../validators';
 export class RegisterComponent {
 
   regForm: FormGroup;
+  user = {
+    locale: "en"
+  };
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private userService: UserService
+  ) {
     this.regForm = fb.group({
       "email": email,
       "password": password,
@@ -21,11 +31,11 @@ export class RegisterComponent {
       "last_name": name,
       "locale": "en"
     });
-  }
+  };
 
-  registerUser = (newUser) => {
-    if(newUser.password === newUser.password_confirmation) {
-      console.log(newUser);
-    }
-  }
+  createUser = () => {
+    console.log(this.user);
+    const response = this.userService.registerUser(this.user);    
+    response.subscribe(() => console.log('success'));
+  };
 }
