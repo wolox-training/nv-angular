@@ -16,4 +16,9 @@ export class UserService {
     console.log({user});
     return this.http.post(this.ROOT_URL + '/users', { user });
   }
+
+  logUser = (session) => {
+    console.log({session});
+    return this.http.post(this.ROOT_URL + '/users/sessions', { session });
+  }
 }

@@ -16,5 +16,5 @@
     <input class="form-input" type="password" formControlName="password_confirmation" [(ngModel)]="user.password_confirmation">
     <div class="alert" *ngIf="!regForm.controls['password_confirmation'].valid && regForm.controls['password_confirmation'].touched">Este campo es obligatorio</div>
   <div class="button-container"><button type="submit" class="signup-button" [disabled]="!regForm.valid">Sign up</button></div>
-  <button type="button" class="login-button">Login</button>
+  <button type="button" class="login-button" (click)="redirectLogin()">Login</button>
 </form>
