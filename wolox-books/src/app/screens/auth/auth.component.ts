@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,13 +7,5 @@ import { LocalStorageService } from '../../services/local-storage.service';
 })
 export class AuthComponent {
 
-  constructor(
-    private router:Router,
-    private localStorageService:LocalStorageService
-  ) { }
-
-  closeSession = () => {
-    this.localStorageService.clearStorage();
-    this.router.navigate(['']);
-  }
+  constructor() { }
 }

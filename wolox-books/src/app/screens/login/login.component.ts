@@ -27,7 +27,7 @@ export class LoginComponent {
     }
 
   redirectRegister = () => {
-    this.router.navigate(['sign-up']);
+    this.router.navigate(['unauth/sign-up']);
   }
 
   openSession = () => {
@@ -35,7 +35,6 @@ export class LoginComponent {
     response.subscribe( data => {
       const token = JSON.parse(JSON.stringify(data)).access_token;
       if (token) {
-        console.log(token);
         this.localStorageService.setValue('token', token);
         this.router.navigate(['auth']);
       }

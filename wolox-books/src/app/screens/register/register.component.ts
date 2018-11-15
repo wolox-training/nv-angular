@@ -39,10 +39,10 @@ export class RegisterComponent {
     console.log(this.user);
     const response = this.userService.registerUser(this.user);    
     response.subscribe(() => console.log('success'));
-    this.router.navigate(['login']);
+    this.router.navigate(['unauth']);
   };
 
   redirectLogin = () => {
-    this.router.navigate(['login']);
+    this.router.navigate(['unauth']);
   }
 }
