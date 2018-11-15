@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -16,7 +17,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private localStorageService: LocalStorageService
     ) {
       this.logForm = fb.group({
         "email": null,
@@ -30,7 +32,14 @@ export class LoginComponent {
 
   openSession = () => {
     const response = this.userService.logUser(this.session);    
-    response.subscribe( data => console.log( JSON.parse(JSON.stringify(data)).access_token ) );
+    response.subscribe( data => {
+      const token = JSON.parse(JSON.stringify(data)).access_token;
+      if (token) {
+        console.log(token);
+        this.localStorageService.setValue('token', token);
+        this.router.navigate(['auth']);
+      }
+    });
 
   }
 }
