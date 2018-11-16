@@ -17,6 +17,7 @@ import { UnauthComponent } from './screens/unauth/unauth.component';
 import { BookListComponent } from './screens/book-list/book-list.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
+import { DetailsComponent } from './screens/details/details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UnauthGuard } from './unauth.guard';
     LoginComponent,
     AuthComponent,
     UnauthComponent,
-    BookListComponent
+    BookListComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

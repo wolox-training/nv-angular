@@ -7,19 +7,25 @@ import { UnauthComponent } from './screens/unauth/unauth.component';
 import { BookListComponent } from './screens/book-list/book-list.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
+import { DetailsComponent } from './screens/details/details.component';
 
 const routes: Routes = [
   {
-    path: 'auth',
+    path: '',
     canActivate: [AuthGuard],
     children: [
       {
         path: '',
-        component: BookListComponent
+        redirectTo: 'books',
+        pathMatch: 'full'
       },
       {
         path: 'books',
         component: BookListComponent
+      },
+      {
+        path: 'books/:id',
+        component: DetailsComponent
       }
     ]
   },
@@ -29,7 +35,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: LoginComponent
+        redirectTo: 'login',
+        pathMatch: 'full'
       },
       {
         path: 'login',

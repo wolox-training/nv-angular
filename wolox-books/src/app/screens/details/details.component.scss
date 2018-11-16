@@ -1,0 +1,86 @@
+@import '../../../scss/variables/colors.scss';
+
+.navbar-container {
+  align-items: center;
+  background-color: $white;
+  border-top: 4px solid $wolox-blue;
+  box-shadow: 0 5px 20px $grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 300px;
+}
+
+.navbar-logo {
+  max-width: 180px;
+}
+
+.logout {
+  color: $black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.detail-card {
+  box-shadow: 6px 6px 10px $grey;
+  display: flex;
+  margin: 50px auto;
+  padding: 25px;
+  width: 900px;
+}
+
+.detail-image {
+  margin-right: 50px;
+  height: 350px;
+  width: 250px;
+}
+
+.no-cover {
+  margin-right: 50px;
+  height: 350px;
+  width: 250px;
+  background-color: $grey;
+}
+
+.detail-title {
+  border-bottom: 4px solid $wolox-green;
+  color: $black;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.detail-genre {
+  color: $darkgrey;
+  font-size: 20px;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.detail-item {
+  color: $black;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.detail-item-value {
+  color: $darkgrey;
+  font-size: 16px;
+}
+
+.volver-button {
+  background-color: $wolox-green;
+  border: 0;
+  color: $white;
+  display: flex;
+  font-weight: bold;
+  margin: auto;
+  padding: 15px;
+}

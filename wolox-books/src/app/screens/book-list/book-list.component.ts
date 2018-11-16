@@ -11,6 +11,7 @@ import { BooksService } from '../../services/books.service';
 export class BookListComponent implements OnInit {
 
   books: any;
+  bookDetail: any;
 
   constructor(
     private router:Router,
@@ -20,10 +21,15 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() {
     this.booksService.obtainBooks().subscribe( data => this.books = data);
+    this.booksService.obtainBooks().subscribe( data => console.log(data));
   }
 
   closeSession = () => {
     this.localStorageService.clearStorage();
     this.router.navigate(['unauth']);
+  }
+
+  openDetail = (id) => {
+    this.router.navigate([`/books/${id}`]);
   }
 }

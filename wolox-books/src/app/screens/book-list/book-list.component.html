@@ -1,9 +1,9 @@
 <header class="navbar-container">
-    <img class="navbar-logo" src="../../assets/wolox-books.png" alt="Wolox Logo">
-    <a class="logout" (click)="closeSession()">Logout</a>
+  <img class="navbar-logo" src="../../assets/wolox-books.png" alt="Wolox Logo">
+  <a class="logout" (click)="closeSession()">Logout</a>
 </header>
 <div class="books-container">
-  <div class="book-card" *ngFor="let book of books">  
+  <div class="book-card" *ngFor="let book of books" (click)="openDetail(book.id)">
     <img class="book-cover" *ngIf="book.image_url" src="{{ book.image_url }}" alt="Book Cover">
     <div class="no-cover" *ngIf="!book.image_url"></div>
     <h1 class="book-title">{{ book.title }}</h1>

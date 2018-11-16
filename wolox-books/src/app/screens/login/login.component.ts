@@ -37,7 +37,7 @@ export class LoginComponent {
       const token = JSON.parse(JSON.stringify(data)).access_token;
       if (token) {
         this.localStorageService.setValue('token',token);
-        this.router.navigate(['auth']);
+        this.router.navigate(['books']);
       }
     });
   }

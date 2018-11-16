@@ -16,4 +16,7 @@ export class BooksService {
   };
 
   obtainBooks = () => this.http.get(this.ROOT_URL + '/books');
+
+  obtainBookDetail = (id) => this.http.get(this.ROOT_URL + '/books/' + id);
+  
 }
