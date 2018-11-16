@@ -5,7 +5,7 @@ import { LocalStorageService } from './local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class BooksService {
 
   private ROOT_URL;
   
@@ -14,12 +14,6 @@ export class UserService {
     private localStorageService: LocalStorageService) { 
     this.ROOT_URL = 'https://wbooks-api-stage.herokuapp.com/api/v1';
   };
-  
-  registerUser = (user) => this.http.post(this.ROOT_URL + '/users', { user });
-  
-  logUser = (session) => this.http.post(this.ROOT_URL + '/users/sessions', { session });
-  
-  loggedIn = () => !!this.localStorageService.getValue('token');
 
-  getToken = () => this.localStorageService.getValue('token');
+  obtainBooks = () => this.http.get(this.ROOT_URL + '/books');
 }

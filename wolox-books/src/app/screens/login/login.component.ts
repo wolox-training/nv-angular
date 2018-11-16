@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { TokenInterceptorService } from 'src/app/services/token-interceptor.service';
 
 @Component({
   selector: 'app-login',
@@ -35,10 +36,9 @@ export class LoginComponent {
     response.subscribe( data => {
       const token = JSON.parse(JSON.stringify(data)).access_token;
       if (token) {
-        this.localStorageService.setValue('token', token);
+        this.localStorageService.setValue('token',token);
         this.router.navigate(['auth']);
       }
     });
-
   }
 }

@@ -1,11 +1,11 @@
 @import '../../../scss/variables/colors.scss';
 
 .navbar-container {
+  align-items: center;
   background-color: $white;
   border-top: 4px solid $wolox-blue;
   box-shadow: 0 5px 20px $grey;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 10px 300px;
 }
@@ -18,4 +18,43 @@
   color: $black;
   font-size: 18px;
   font-weight: bold;
+}
+
+.books-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-gap: 50px;
+  grid-template-columns: repeat(4,260px);
+  margin: 100px auto;
+  width: 1200px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 6px 6px 10px $grey;
+  padding: 25px;
+}
+
+.book-cover {
+  width: 200px;
+  height: 330px;
+  margin-bottom: 25px;
+}
+
+.no-cover {
+  width: 200px;
+  height: 330px;
+  margin-bottom: 25px;
+  background-color: $grey;
+}
+
+.book-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.book-author {
+  font-size: 14px;
 }
