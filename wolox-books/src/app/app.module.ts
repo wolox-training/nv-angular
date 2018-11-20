@@ -18,6 +18,7 @@ import { BookListComponent } from './screens/book-list/book-list.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
 import { DetailsComponent } from './screens/details/details.component';
+import { registerLocaleData } from '@angular/common';
 
 @NgModule({
   declarations: [

@@ -1,10 +1,10 @@
 <form class="form-container" [formGroup]="logForm" (ngSubmit)="openSession()">
     <img class="wolox-logo" src="../../assets/wolox-books.png" alt="Wolox Logo">
-    <label class="form-label">Email</label>
+    <label class="form-label" i18n>Email</label>
       <input class="form-input" type="text" formControlName="email" [(ngModel)]="session.email">
-    <label class="form-label">Password</label>
+    <label class="form-label" i18n>Password</label>
       <input class="form-input" type="password" formControlName="password" [(ngModel)]="session.password">
-    <div class="button-container"><button type="submit" class="login-button">Login</button></div>    
-    <button type="button" class="signup-button" (click)="redirectRegister()">Sign up</button>
+    <div class="button-container"><button type="submit" class="login-button" i18n>Login</button></div>    
+    <button type="button" class="signup-button" (click)="redirectRegister()" i18n>Sign up</button>
   </form>
   

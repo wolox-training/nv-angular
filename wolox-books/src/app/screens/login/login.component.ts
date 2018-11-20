@@ -13,7 +13,7 @@ import { TokenInterceptorService } from 'src/app/services/token-interceptor.serv
 export class LoginComponent {
 
   logForm: FormGroup;
-  session = {};
+  session:any = {};
 
   constructor(
     private fb: FormBuilder,

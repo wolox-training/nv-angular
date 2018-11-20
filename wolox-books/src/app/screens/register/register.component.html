@@ -1,20 +1,20 @@
 <form class="form-container" [formGroup]="regForm" (ngSubmit)="createUser()">
   <img class="wolox-logo" src="../../assets/wolox-books.png" alt="Wolox Logo">
-  <label class="form-label">First name</label>
+  <label class="form-label" i18n>First name</label>
     <input class="form-input" type="text" formControlName="first_name" [(ngModel)]="user.first_name">
     <div class="alert" *ngIf="!regForm.controls['first_name'].valid && regForm.controls['first_name'].touched">Este campo es obligatorio</div>
-  <label class="form-label">Last name</label>
+  <label class="form-label" i18n>Last name</label>
     <input class="form-input" type="text" formControlName="last_name" [(ngModel)]="user.last_name">
     <div class="alert" *ngIf="!regForm.controls['last_name'].valid && regForm.controls['last_name'].touched">Este campo es obligatorio</div>  
-  <label class="form-label">Email</label>
+  <label class="form-label" i18n>Email</label>
     <input class="form-input" type="text" formControlName="email" [(ngModel)]="user.email">
     <div class="alert" *ngIf="!regForm.controls['email'].valid && regForm.controls['email'].touched">Este campo es obligatorio</div>
-  <label class="form-label">Password</label>
+  <label class="form-label" i18n>Password</label>
     <input class="form-input" type="password" formControlName="password" [(ngModel)]="user.password">
     <div class="alert" *ngIf="!regForm.controls['password'].valid && regForm.controls['password'].touched">Este campo es obligatorio</div>
-  <label class="form-label">Password Confirmation</label>
+  <label class="form-label" i18n>Password Confirmation</label>
     <input class="form-input" type="password" formControlName="password_confirmation" [(ngModel)]="user.password_confirmation">
     <div class="alert" *ngIf="!regForm.controls['password_confirmation'].valid && regForm.controls['password_confirmation'].touched">Este campo es obligatorio</div>
-  <div class="button-container"><button type="submit" class="signup-button" [disabled]="!regForm.valid">Sign up</button></div>
-  <button type="button" class="login-button" (click)="redirectLogin()">Login</button>
+  <div class="button-container"><button type="submit" class="signup-button" [disabled]="!regForm.valid" i18n>Sign up</button></div>
+  <button type="button" class="login-button" (click)="redirectLogin()" i18n>Login</button>
 </form>

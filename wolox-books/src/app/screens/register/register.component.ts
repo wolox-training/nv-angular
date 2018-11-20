@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
 
   regForm: FormGroup;
-  user = {
+  user:any = {
     locale: "en"
   };
 

@@ -1,5 +1,5 @@
 <header class="navbar-container">
-    <img class="navbar-logo" src="../../assets/wolox-books.png" alt="Wolox Logo">
+    <img class="navbar-logo" src="../../assets/wolox-books.png" alt="Wolox Logo" (click)="returnBooks()">
     <a class="logout" (click)="closeSession()">Logout</a>
 </header>
 <div class="detail-card">
@@ -7,9 +7,9 @@
   <div class="no-cover" *ngIf="!bookDetail.image_url"></div>
   <div class="detail-info">
     <h1 class="detail-title">{{ bookDetail.title }} <h1 class="detail-genre">({{ bookDetail.genre }})</h1></h1>
-    <h5 class="detail-item">Book author: <h5 class="detail-item-value">{{ bookDetail.author }}</h5></h5>
-    <h5 class="detail-item">Publisher:  <h5 class="detail-item-value">{{ bookDetail.publisher }}</h5></h5>
-    <h5 class="detail-item">Year of publication: <h5 class="detail-item-value">{{ bookDetail.year }}</h5></h5>
+    <h5 class="detail-item" i18n>Book author: <h5 class="detail-item-value">{{ bookDetail.author }}</h5></h5>
+    <h5 class="detail-item" i18n>Publisher:  <h5 class="detail-item-value">{{ bookDetail.publisher }}</h5></h5>
+    <h5 class="detail-item" i18n>Year of publication: <h5 class="detail-item-value">{{ bookDetail.year }}</h5></h5>
   </div>
 </div>
-<button class="volver-button" (click)="returnBooks()"> Volver </button>
+<button class="volver-button" (click)="returnBooks()">Volver</button>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="62b6c66981335ca6eecc36b331103c60f09d1026" datatype="html">
+        <source>First name</source>
+        <target>Nombre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ce3dadf53dda1a1ab0c3167a8ed8dced471b0dc" datatype="html">
+        <source>Last name</source>
+        <target>Apellido</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/login/login.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <target>Contraseña</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/login/login.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8581caa7ec7691dd48e3e63a9e29630cefa4d4a0" datatype="html">
+        <source>Password Confirmation</source>
+        <target>Confirmación de contraseña</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c40c132843f349c3aa49730405de1d0ca733aef6" datatype="html">
+        <source>Sign up</source>
+        <target>Registrarse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/login/login.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <target>Iniciar sesión</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/register/register.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/login/login.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="04ba1e9fd4be18f46412b518bea26f857967dd14" datatype="html">
+        <source>Book author: <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/><x id="INTERPOLATION" equiv-text="{{ bookDetail.author }}"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/></source>
+        <target>Autor: <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/><x id="INTERPOLATION" equiv-text="{{ bookDetail.author }}"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/details/details.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f23e25fbc469775e8aa65f6f1285a3741f1b4be2" datatype="html">
+        <source>Publisher:  <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/><x id="INTERPOLATION" equiv-text="{{ bookDetail.publisher }}"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/></source>
+        <target>Editorial:  <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/><x id="INTERPOLATION" equiv-text="{{ bookDetail.publisher }}"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/details/details.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6c1995f3408b00d9101687e0330ed441440a8f42" datatype="html">
+        <source>Year of publication: <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/><x id="INTERPOLATION" equiv-text="{{ bookDetail.year }}"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/></source>
+        <target>Año de publicación: <x id="START_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;h5&gt;"/><x id="INTERPOLATION" equiv-text="{{ bookDetail.year }}"/><x id="CLOSE_HEADING_LEVEL5" ctype="x-h5" equiv-text="&lt;/h5&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/screens/details/details.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
