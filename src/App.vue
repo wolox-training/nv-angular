@@ -5,8 +5,8 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import 'scss/variables/colors.scss';
+@import 'scss/application';
+@import 'scss/variables/colors';
 
 #app {
   font-family: 'Roboto', sans-serif;
@@ -26,7 +26,7 @@
   }
 }
 
-input {
+.input {
   border: 2px solid $transparent;
   border-radius: 5px;
   height: 25px;
@@ -40,10 +40,10 @@ input {
   }
 }
 
-button {
+.button {
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 40px;
   outline: 0;
   padding: 10px;
 }
