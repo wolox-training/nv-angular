@@ -7,10 +7,10 @@
     <input class="input" type="text" v-model="lastName"/>
     <label class="form-label">Email</label>
     <input class="input" type="text" v-model="email"/>
-    <div class="error" v-if="!$v.email.email">Email address not valid</div>
+    <p class="error" v-if="!$v.email.email">Email address not valid</p>
     <label class="form-label">Password</label>
     <input class="input" type="password" v-model="password"/>
-    <div class="error" v-if="!$v.password.passwordFormat && password">Password should contain at least one number and one upper case</div>
+    <p class="error" v-if="!$v.password.passwordFormat && password">Password should contain at least one number and one upper case</p>
     <button type="submit" class="button signup-button" :disabled="$v.$invalid">Sign Up</button>
     <button class="button login-button">Login</button>
   </form>
