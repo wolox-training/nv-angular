@@ -17,7 +17,9 @@
 </template>
 
 <script>
-import { email } from 'vuelidate/lib/validators';
+import { email } from 'vuelidate/lib/validators'
+import { createUser } from '../services/UserService.js'
+
 export default {
   data () {
     return {
@@ -33,15 +35,25 @@ export default {
       email
     },
     password: {
-      passwordFormat(value){
-        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-        return re.test(value);
+      passwordFormat(value) {
+        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+        return re.test(value)
       }
     }
   },
   methods: {
-    onSubmit () {
-      console.log(this.firstName, this.lastName, this.email, this.password)
+    onSubmit() {
+      const body = {
+        "user": {
+          "email": this.email,
+          "password": this.password,
+          "password_confirmation": this.password,
+          "first_name": this.firstName,
+          "last_name": this.lastName,
+          "locale": "en"
+        }
+      }
+      createUser(body)
     }
   }
 }
