@@ -18,9 +18,6 @@
 
 <script>
 import { email } from 'vuelidate/lib/validators';
-
-const price_greater = (value) => (value >= 14);
-
 export default {
   data () {
     return {
