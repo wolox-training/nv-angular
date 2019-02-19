@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Register from './views/Register'
 import Login from './views/Login'
+import Home from './views/Home'
 
 Vue.use(Router)
 
@@ -9,7 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      name: 'home',
+      component: Home
     },
     {
       path: '/sign-up',
