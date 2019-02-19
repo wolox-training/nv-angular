@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       firstName: null,
       lastName: null,
@@ -26,7 +26,7 @@ export default {
     }
   },
   methods: {
-    onSubmit () {
+    onSubmit() {
       console.log(this.firstName, this.lastName, this.email, this.password)
     }
   }
@@ -71,7 +71,7 @@ export default {
 
   &:after {
     position: absolute;
-    content: " ";
+    content: ' ';
     border: 1px solid $grey;
     width: 100%;
     left: 0;
