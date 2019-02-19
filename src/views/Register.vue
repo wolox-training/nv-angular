@@ -12,7 +12,7 @@
     <input class="input" type="password" v-model="password"/>
     <p class="error" v-if="!$v.password.passwordFormat && password">Password should contain at least one number and one upper case</p>
     <button type="submit" class="button signup-button" :disabled="$v.$invalid">Sign Up</button>
-    <button class="button login-button">Login</button>
+    <button class="button login-button" @click="redirectLogin">Login</button>
   </form>
 </template>
 
@@ -54,6 +54,9 @@ export default {
         }
       }
       createUser(body)
+    },
+    redirectLogin() {
+      this.$router.push({ name: 'login' })
     }
   }
 }
