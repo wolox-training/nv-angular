@@ -43,7 +43,7 @@ export default {
           "password": this.password,
         }
       }
-      getToken(body)
+      getToken(body).then(res => console.log(res.data.access_token))
     },
     redirectSignup() {
       this.$router.push({ name: 'register' })
