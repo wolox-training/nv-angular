@@ -7,14 +7,20 @@
     <input class="input" type="text" v-model="lastName"/>
     <label class="form-label">Email</label>
     <input class="input" type="text" v-model="email"/>
+    <div class="error" v-if="!$v.email.email">Email address not valid</div>
     <label class="form-label">Password</label>
     <input class="input" type="password" v-model="password"/>
-    <button type="submit" class="button signup-button">Sign Up</button>
+    <div class="error" v-if="!$v.password.passwordFormat && password">Password should contain at least one number and one upper case</div>
+    <button type="submit" class="button signup-button" :disabled="$v.$invalid">Sign Up</button>
     <button class="button login-button">Login</button>
   </form>
 </template>
 
 <script>
+import { email } from 'vuelidate/lib/validators';
+
+const price_greater = (value) => (value >= 14);
+
 export default {
   data () {
     return {
@@ -23,6 +29,17 @@ export default {
       email: null,
       password: null,
       locale: 'en'
+    }
+  },
+  validations: {
+    email: {
+      email
+    },
+    password: {
+      passwordFormat(value){
+        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        return re.test(value);
+      }
     }
   },
   methods: {
@@ -41,6 +58,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 80px;
   padding: 20px;
   width: 280px;
 }
@@ -77,11 +95,23 @@ export default {
     left: 0;
     top: 50px;
   }
+
+  &:disabled {
+    background-color: $grey;
+    cursor: not-allowed;
+  }
 }
 
 .login-button {
   background-color: $transparent;
   border: 2px solid $wolox-green;
   color: $wolox-green;
+}
+
+.error {
+  color: $red;
+  font-size: 11px;
+  font-style: italic;
+  text-align: left;
 }
 </style>
