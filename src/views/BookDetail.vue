@@ -8,13 +8,13 @@
           h1.title {{book.title}}
           h2.genre ({{book.genre}})
         div.info-container
-          label.label Book author:
+          label.label {{ $t("book.author")}}
           p.data {{book.author}}
         div.info-container
-          label.label Publisher:
+          label.label {{ $t("book.publisher")}}
           p.data {{book.publisher}}
         div.info-container
-          label.label Year:
+          label.label {{ $t("book.year")}}
           p.data {{book.year}}
 </template>
 
