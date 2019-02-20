@@ -1,8 +1,7 @@
-<template>
-  <div>
-    <NavBar />
-    <BookList />
-  </div>
+<template lang="pug">
+  div
+    NavBar
+    BookList
 </template>
 
 <script>

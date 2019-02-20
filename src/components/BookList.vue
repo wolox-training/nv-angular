@@ -1,11 +1,9 @@
-<template>
-  <div class="book-grid">
-    <div class="book-container" v-for="book in books">
-      <img class="cover" :src="book.image_url" alt="Cover" />
-      <h1 class="title">{{ book.title }}</h1>
-      <p class="author">{{ book.author }}</p>      
-    </div>
-  </div>
+<template lang="pug">
+  .book-grid
+    .book-container(v-for='book in books')
+      img.cover(:src='book.image_url', alt='Cover')
+      h1.title {{ book.title }}
+      p.author {{ book.author }}
 </template>
 
 <script>
