@@ -2,9 +2,10 @@
   .book-grid
     .book-container(v-for='book in books')
       router-link(:to="{ name: 'book-detail', params: { id: book.id }}")
-        img.cover(:src='book.image_url', alt='Cover')
-        h1.title {{ book.title }}
-        p.author {{ book.author }}
+        .book-card
+          img.cover(:src='book.image_url', alt='Cover')
+          h1.title {{ book.title }}
+          p.author {{ book.author }}
 </template>
 
 <script>
@@ -60,5 +61,10 @@ export default {
       font-size: 14px;
       text-align: left;
     }
+  }
+
+  .book-card {
+    display:flex;
+    flex-direction: column;
   }
 </style>
