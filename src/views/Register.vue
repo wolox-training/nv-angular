@@ -42,7 +42,7 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       const body = {
         "user": {
           "email": this.email,
@@ -53,7 +53,7 @@ export default {
           "locale": "en"
         }
       }
-      createUser(body)
+      await createUser(body)
     }
   }
 }
