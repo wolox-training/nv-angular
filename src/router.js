@@ -22,6 +22,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/books/:id',
+      name: 'book-detail',
+      component: () => import(/* webpackChunkName: "book-detail" */ './views/BookDetail.vue')
     }
   ]
 })
