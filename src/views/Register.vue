@@ -12,7 +12,7 @@
     <input class="input" type="password" v-model="password"/>
     <p class="error" v-if="!$v.password.password && password">Password should contain at least one number and one upper case</p>
     <button type="submit" class="button signup-button" :disabled="$v.$invalid">Sign Up</button>
-    <button class="button login-button">Login</button>
+    <router-link class="button login-button" to="/login">Login</router-link>
   </form>
 </template>
 
