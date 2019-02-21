@@ -14,15 +14,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setBooks (context) {
-      getBooks().then(books => {
-        context.commit('setBooks', books.data)
-      })
+    async setBooks (context) {
+      const response = await getBooks()
+      context.commit('setBooks', response.data)
     }
   },
   getters: {
-    getBooks (state) {
-      return state.books;
-    }
+    getBooks: state => state.books
   }
 })
