@@ -19,6 +19,7 @@
 <script>
 import { email } from 'vuelidate/lib/validators'
 import { password } from '@/utils/validators'
+import { createUser } from '@/services/UserService'
 
 export default {
   data() {
@@ -36,7 +37,17 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log(this.firstName, this.lastName, this.email, this.password)
+      const body = {
+        "user": {
+          "email": this.email,
+          "password": this.password,
+          "password_confirmation": this.password,
+          "first_name": this.firstName,
+          "last_name": this.lastName,
+          "locale": "en"
+        }
+      }
+      createUser(body)
     }
   }
 }
@@ -98,6 +109,7 @@ export default {
   background-color: $transparent;
   border: 2px solid $wolox-green;
   color: $wolox-green;
+  text-align: center;
 }
 
 .error {
