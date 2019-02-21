@@ -9,18 +9,15 @@
 </template>
 
 <script>
-import { getBooks } from '../services/BookService.js'
+import { mapGetters } from 'vuex'
 
 export default {
-  data () {
-    return {
-      books: null
-    }
-  },
   mounted() {
-    getBooks().then(res => {
-      this.books = res.data      
-    })
+    this.$store.dispatch('setBooks')
+  },
+  computed: {
+    ...mapGetters({
+      'books': 'getBooks'
   }
 }
 </script>

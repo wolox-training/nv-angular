@@ -15,7 +15,7 @@
     label.form-label 
       | Password
     input.input(type='password' v-model='password')
-    p.error(v-if='!$v.password.passwordFormat && password') 
+    p.error(v-if='!$v.password.password && password') 
       | Password should contain at least one number and one upper case
     button.button.signup-button(type='submit' :disabled='$v.$invalid') 
       | Sign Up
