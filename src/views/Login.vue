@@ -15,6 +15,7 @@
 <script>
 import { email } from 'vuelidate/lib/validators'
 import { getToken } from '../services/UserService.js'
+import LocalStorageService from '../services/LocalStorageService.js'
 import { password } from '@/utils/validators'
 
 export default {
@@ -32,7 +33,12 @@ export default {
   methods: {
     onSubmit() {
       const { email, password } = this
-      getToken({ email, password}).then(res => console.log(res.data.access_token))
+      getToken({ email, password}).then(res => {
+        if(res.ok){
+          LocalStorageService.setAuthToken(res.data.access_token)
+          this.$router.push({ name: 'home' })
+        }
+      })
     }
   }
 }
