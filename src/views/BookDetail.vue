@@ -5,17 +5,25 @@
       img.cover(:src='book.image_url')
       div.detail-info
         div.title-container
-          h1.title {{book.title}}
-          h2.genre ({{book.genre}})
+          h1.title 
+            | {{book.title}}
+          h2.genre 
+            | ({{book.genre}})
         div.info-container
-          label.label {{ $t("book.author")}}
-          p.data {{book.author}}
+          label.label 
+            | {{ $t("book.author")}}
+          p.data 
+            | {{book.author}}
         div.info-container
-          label.label {{ $t("book.publisher")}}
-          p.data {{book.publisher}}
+          label.label 
+            | {{ $t("book.publisher")}}
+          p.data 
+            | {{book.publisher}}
         div.info-container
-          label.label {{ $t("book.year")}}
-          p.data {{book.year}}
+          label.label 
+            | {{ $t("book.year")}}
+          p.data 
+            | {{book.year}}
 </template>
 
 <script>

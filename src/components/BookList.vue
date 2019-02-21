@@ -4,8 +4,10 @@
       router-link(:to="{ name: 'book-detail', params: { id: book.id }}")
         .book-card
           img.cover(:src='book.image_url', alt='Cover')
-          h1.title {{ book.title }}
-          p.author {{ book.author }}
+          h1.title 
+            | {{ book.title }}
+          p.author 
+            | {{ book.author }}
 </template>
 
 <script>

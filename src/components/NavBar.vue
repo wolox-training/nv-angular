@@ -2,7 +2,8 @@
   .navbar-container
     router-link(:to="{ name: 'home' }")
       img.wolox-logo(src='../assets/wolox-logo.png')
-    a.logout(@click='logout') {{ $t("navbar.logout")}}
+    a.logout(@click='logout') 
+      | {{ $t("navbar.logout")}}
 </template>
 
 <script>
