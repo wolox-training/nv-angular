@@ -31,7 +31,7 @@ export default {
     password: { password }
   },
   methods: {
-    onSubmit() {      
+    onSubmit() {
       const { email, password } = this
       getToken({ email, password}).then(res => {
         if(res.ok){
