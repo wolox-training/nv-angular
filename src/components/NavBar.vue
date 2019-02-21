@@ -1,7 +1,8 @@
 <template lang="pug">
   .navbar-container
     img.wolox-logo(src='../assets/wolox-logo.png')
-    a.logout(@click='logout') Logout
+    a.logout(@click='logout') 
+      | Logout
 </template>
 
 <script>
@@ -40,6 +41,4 @@ export default {
   color: $black;
   font-weight: bold;
 }
-
-
 </style>

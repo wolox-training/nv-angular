@@ -1,20 +1,27 @@
 <template lang="pug">
   form.container(@submit.prevent='onSubmit')
     img.wolox-logo(src='../assets/wolox-logo.png')
-    label.form-label Email
-    input.input(type='text', v-model='email')
-    p.error(v-if='!$v.email.email') Email address not valid
-    label.form-label Password
-    input.input(type='password', v-model='password')
-    p.error(v-if='!$v.password.passwordFormat && password') Password should contain at least one number and one upper case
-    button.button.login-button(type='submit', :disabled='$v.$invalid') Login
-    button.button.signup-button(type='button', @click='redirectSignup') Sign Up
+    label.form-label 
+      | Email
+    input.input(type='text' v-model='email')
+    p.error(v-if='!$v.email.email') 
+      | Email address not valid
+    label.form-label 
+      | Password
+    input.input(type='password' v-model='password')
+    p.error(v-if='!$v.password.password && password') 
+      | Password should contain at least one number and one upper case
+    button.button.login-button(type='submit' :disabled='$v.$invalid') 
+      | Login
+    router-link.button.signup-button(to='/sign-up') 
+      | Sign Up
 </template>
 
 <script>
 import { email } from 'vuelidate/lib/validators'
 import { getToken } from '../services/UserService.js'
 import LocalStorageService from '../services/LocalStorageService.js'
+import { password } from '@/utils/validators'
 
 export default {
   data () {
@@ -25,33 +32,18 @@ export default {
     }
   },
   validations: {
-    email: {
-      email
-    },
-    password: {
-      passwordFormat(value) {
-        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
-        return re.test(value)
-      }
-    }
+    email: { email },
+    password: { password }
   },
   methods: {
     onSubmit() {
-      const body = {
-        "session": {
-          "email": this.email,
-          "password": this.password,
-        }
-      }
-      getToken(body).then(res => {
+      const { email, password } = this
+      getToken({ email, password}).then(res => {
         if(res.ok){
           LocalStorageService.setAuthToken(res.data.access_token)
           this.$router.push({ name: 'home' })
         }
       })
-    },
-    redirectSignup() {
-      this.$router.push({ name: 'register' })
     }
   }
 }
@@ -91,7 +83,7 @@ export default {
 
   &:after {
     position: absolute;
-    content: " ";
+    content: ' ';
     border: 1px solid $grey;
     width: 100%;
     left: 0;
@@ -108,6 +100,7 @@ export default {
   background-color: $transparent;
   border: 2px solid $wolox-green;
   color: $wolox-green;
+  text-align: center;
 }
 
 .error {

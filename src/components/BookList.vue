@@ -1,22 +1,23 @@
 <template lang="pug">
   .book-grid
     .book-container(v-for='book in books')
-      img.cover(:src='book.image_url', alt='Cover')
-      h1.title {{ book.title }}
-      p.author {{ book.author }}
+      img.cover(:src='book.image_url' alt='Cover')
+      h1.title 
+        | {{ book.title }}
+      p.author 
+        | {{ book.author }}
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
 export default {
-  mounted: function () {
+  mounted() {
     this.$store.dispatch('setBooks')
   },
   computed: {
     ...mapGetters({
       'books': 'getBooks'
-    })
   }
 }
 </script>
