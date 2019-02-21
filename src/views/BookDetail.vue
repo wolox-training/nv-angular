@@ -4,7 +4,7 @@
     div.detail-container
       img.cover(:src='book.image_url')
       div.detail-info
-        div.title-container
+        div.title-container(:style='borderColor')
           h1.title {{book.title}}
           h2.genre ({{book.genre}})
         div.info-container
@@ -35,6 +35,20 @@ export default {
   mounted: function(){
     const id = this.$route.params.id
     getBook(id).then(res => this.book = res.data)
+  },
+  computed: {
+    borderColor() {
+      return {
+        '--border-color': this.color
+      }
+    }
+  },
+  props: {
+    color: {
+      type: String,
+      required: false,
+      default: '#9ACD32'
+    }
   }
 }
 </script>
@@ -65,7 +79,7 @@ export default {
   }
 
   .title-container {
-    border-bottom: 3px solid $wolox-green;
+    border-bottom: 3px solid  var(--border-color);
     display: flex;
     padding-bottom: 20px;
     text-align: left;
