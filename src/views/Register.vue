@@ -19,16 +19,17 @@
       | Password should contain at least one number and one upper case
     button.button.signup-button(type='submit' :disabled='$v.$invalid') 
       | Sign Up
-    button.button.login-button(@click='redirectLogin') 
+    router-link.button.login-button(to='/login') 
       | Login
 </template>
 
 <script>
 import { email } from 'vuelidate/lib/validators'
-import { createUser } from '../services/UserService.js'
+import { password } from '@/utils/validators'
+import { createUser } from '@/services/UserService'
 
 export default {
-  data () {
+  data() {
     return {
       firstName: null,
       lastName: null,
@@ -38,15 +39,8 @@ export default {
     }
   },
   validations: {
-    email: {
-      email
-    },
-    password: {
-      passwordFormat(value) {
-        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
-        return re.test(value)
-      }
-    }
+    email: { email },
+    password: { password }
   },
   methods: {
     onSubmit() {
@@ -61,9 +55,6 @@ export default {
         }
       }
       createUser(body)
-    },
-    redirectLogin() {
-      this.$router.push({ name: 'login' })
     }
   }
 }
@@ -108,7 +99,7 @@ export default {
 
   &:after {
     position: absolute;
-    content: " ";
+    content: ' ';
     border: 1px solid $grey;
     width: 100%;
     left: 0;
@@ -125,6 +116,7 @@ export default {
   background-color: $transparent;
   border: 2px solid $wolox-green;
   color: $wolox-green;
+  text-align: center;
 }
 
 .error {

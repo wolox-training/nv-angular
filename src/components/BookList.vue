@@ -17,7 +17,7 @@ export default {
       books: null
     }
   },
-  mounted: function () {
+  mounted() {
     getBooks().then(res => {
       this.books = res.data      
     })

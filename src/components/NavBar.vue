@@ -41,6 +41,4 @@ export default {
   color: $black;
   font-weight: bold;
 }
-
-
 </style>
