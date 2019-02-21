@@ -1,8 +1,8 @@
-<template>
-  <div class="navbar-container">    
-    <img src="../assets/wolox-logo.png" class="wolox-logo" />
-    <button class="logout" @click="logout">Logout</button>
-  </div>
+<template lang="pug">
+  .navbar-container
+    img.wolox-logo(src='../assets/wolox-logo.png')
+    a.logout(@click='logout') 
+      | Logout
 </template>
 
 <script>
