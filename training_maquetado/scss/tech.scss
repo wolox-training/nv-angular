@@ -1,0 +1,71 @@
+.tech-icon {
+  height: $tech-logo-size;
+  width: $tech-logo-size;
+}
+
+.tech-title, 
+.tech-release, 
+.tech-desc {
+  font-size: $text-medium;
+  margin: 4px 0;
+  text-align: center;
+  width: 205px;
+}
+
+.tech-release {
+  font-weight: bold;
+}
+
+.tech-desc {
+  margin: 12px 0;
+}
+
+.tech-grid {
+  align-items: center;
+  display: grid;
+  grid-gap: 35px 30px;
+  grid-template-columns: repeat(3,240px);
+  grid-template-rows: repeat(2,350px);  
+  grid-template-areas: 
+  "first . ."
+  "first . .";
+  justify-content: center;  
+  justify-items: center;
+  margin: 80px 500px;
+}
+
+.tech-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+    
+    &:first-child {
+      border-right: 2px solid $green;
+      grid-area: first;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+  .tech-grid {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .tech-container {
+    border-bottom: 2px solid $green;
+    height: 350px;
+    width: 200px; 
+    
+      &:first-child {
+        border-right: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+  }
+}
