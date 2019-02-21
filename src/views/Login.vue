@@ -8,7 +8,7 @@
     <input class="input" type="password" v-model="password"/>
     <p class="error" v-if="!$v.password.passwordFormat && password">Password should contain at least one number and one upper case</p>
     <button type="submit" class="button login-button" :disabled="$v.$invalid">Login</button>
-    <button type="button" class="button signup-button" @click="redirectSignup">Sign Up</button>
+    <router-link class="button signup-button" to="/sign-up">Sign Up</router-link>
   </form>
 </template>
 
@@ -37,16 +37,8 @@ export default {
   },
   methods: {
     onSubmit() {
-      const body = {
-        "session": {
-          "email": this.email,
-          "password": this.password,
-        }
-      }
-      getToken(body).then(res => console.log(res.data.access_token))
-    },
-    redirectSignup() {
-      this.$router.push({ name: 'register' })
+      const { email, password } = this
+      getToken({ email, password}).then(res => console.log(res.data.access_token))
     }
   }
 }
@@ -86,7 +78,7 @@ export default {
 
   &:after {
     position: absolute;
-    content: " ";
+    content: ' ';
     border: 1px solid $grey;
     width: 100%;
     left: 0;
