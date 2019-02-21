@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-container">    
     <img src="../assets/wolox-logo.png" class="wolox-logo" />
-    <a class="logout" @click="logout">Logout</a>
+    <button class="logout" @click="logout">Logout</button>
   </div>
 </template>
 
@@ -41,6 +41,4 @@ export default {
   color: $black;
   font-weight: bold;
 }
-
-
 </style>

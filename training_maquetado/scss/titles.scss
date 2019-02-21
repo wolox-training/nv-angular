@@ -1,0 +1,20 @@
+*{
+  font-family: $roboto;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  font-size: $text-big;
+  height: $title-decoration-height;
+  margin-left: 322px;
+  padding-top: 160px;
+   
+    &::before {
+      content: url('assets/triangle.svg'); 
+      left: 270px;
+      position: absolute;
+      width: $title-decoration-width;
+      z-index: -1;
+    }
+} 

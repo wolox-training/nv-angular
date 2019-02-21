@@ -1,0 +1,15 @@
+{
+  "name": "wbooks",
+  "version": "1.0.0",
+  "description": "Training AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./app -a localhost -p 8000 -c-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5"
+  }
+}
