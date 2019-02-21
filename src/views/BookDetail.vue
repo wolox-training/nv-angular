@@ -1,25 +1,25 @@
 <template lang="pug">
   div
     NavBar
-    div.detail-container
+    .detail-container
       img.cover(:src='book.image_url')
-      div.detail-info
-        div.title-container
+      .detail-info
+        .title-container
           h1.title 
             | {{book.title}}
           h2.genre 
             | ({{book.genre}})
-        div.info-container
+        .info-container
           label.label 
             | Book author:
           p.data 
             | {{book.author}}
-        div.info-container
+        .info-container
           label.label 
             | Publisher:
           p.data 
             | {{book.publisher}}
-        div.info-container
+        .info-container
           label.label 
             | Year:
           p.data 
