@@ -3,10 +3,12 @@
     img.wolox-logo(src='../assets/wolox-logo.png')
     label.form-label {{ $t("register.email")}}
     input.input(type='text', v-model='email')
-    p.error(v-if='!$v.email.email') {{ $t("validators.email")}}
+    transition(name='list')
+      p.error(v-if='!$v.email.email') {{ $t("validators.email")}}
     label.form-label {{ $t("register.password")}}
     input.input(type='password', v-model='password')
-    p.error(v-if='!$v.password.passwordFormat && password') {{ $t("validators.password")}}
+    transition(name='list')
+      p.error(v-if='!$v.password.passwordFormat && password') {{ $t("validators.password")}}
     button.button.login-button(type='submit', :disabled='$v.$invalid') {{ $t("register.login")}}
     button.button.signup-button(type='button', @click='redirectSignup') {{ $t("register.signUp")}}
 </template>
@@ -115,5 +117,16 @@ export default {
   font-size: 11px;
   font-style: italic;
   text-align: left;
+}
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
 }
 </style>
