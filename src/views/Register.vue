@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import { email } from 'vuelidate/lib/validators';
-import { password } from '@/utils/validators';
+import { email } from 'vuelidate/lib/validators'
+import { password } from '@/utils/validators'
 
 export default {
   data() {
