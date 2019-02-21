@@ -1,6 +1,6 @@
 <template>
   <div class="book-grid">
-    <div class="book-container" v-for="book in books">
+    <div class="book-container" v-for="book in books" :key="book.id">
       <img class="cover" :src="book.image_url" alt="Cover" />
       <h1 class="title">{{ book.title }}</h1>
       <p class="author">{{ book.author }}</p>      
@@ -17,7 +17,7 @@ export default {
       books: null
     }
   },
-  mounted: function () {
+  mounted() {
     getBooks().then(res => {
       this.books = res.data      
     })
