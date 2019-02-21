@@ -1,14 +1,20 @@
 <template lang="pug">
   form.container(@submit.prevent='onSubmit')
     img.wolox-logo(src='../assets/wolox-logo.png')
-    label.form-label Email
-    input.input(type='text', v-model='email')
-    p.error(v-if='!$v.email.email') Email address not valid
-    label.form-label Password
-    input.input(type='password', v-model='password')
-    p.error(v-if='!$v.password.passwordFormat && password') Password should contain at least one number and one upper case
-    button.button.login-button(type='submit', :disabled='$v.$invalid') Login
-    button.button.signup-button(type='button', @click='redirectSignup') Sign Up
+    label.form-label 
+      | Email
+    input.input(type='text' v-model='email')
+    p.error(v-if='!$v.email.email') 
+      | Email address not valid
+    label.form-label 
+      | Password
+    input.input(type='password' v-model='password')
+    p.error(v-if='!$v.password.passwordFormat && password') 
+      | Password should contain at least one number and one upper case
+    button.button.login-button(type='submit' :disabled='$v.$invalid') 
+      | Login
+    button.button.signup-button(type='button' @click='redirectSignup') 
+      | Sign Up
 </template>
 
 <script>
