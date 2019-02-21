@@ -5,17 +5,25 @@
       img.cover(:src='book.image_url')
       div.detail-info
         div.title-container
-          h1.title {{book.title}}
-          h2.genre ({{book.genre}})
+          h1.title 
+            | {{book.title}}
+          h2.genre 
+            | ({{book.genre}})
         div.info-container
-          label.label Book author:
-          p.data {{book.author}}
+          label.label 
+            | Book author:
+          p.data 
+            | {{book.author}}
         div.info-container
-          label.label Publisher:
-          p.data {{book.publisher}}
+          label.label 
+            | Publisher:
+          p.data 
+            | {{book.publisher}}
         div.info-container
-          label.label Year:
-          p.data {{book.year}}
+          label.label 
+            | Year:
+          p.data 
+            | {{book.year}}
 </template>
 
 <script>
@@ -23,16 +31,16 @@ import NavBar from '../components/NavBar'
 import { getBook } from '../services/BookService'
 
 export default {
+  name: 'book-detail',
   data () {
     return {
       book: null
     }
   },
-  name: 'book-detail',
   components: {
     NavBar
   },
-  mounted: function(){
+  mounted(){
     const id = this.$route.params.id
     getBook(id).then(res => this.book = res.data)
   }

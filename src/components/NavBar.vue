@@ -1,6 +1,6 @@
 <template lang="pug">
   .navbar-container
-    router-link(:to="{ name: 'home' }")
+    router-link(to='/')
       img.wolox-logo(src='../assets/wolox-logo.png')
     a.logout(@click='logout') Logout
 </template>

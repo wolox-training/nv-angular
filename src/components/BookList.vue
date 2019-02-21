@@ -1,11 +1,12 @@
 <template lang="pug">
   .book-grid
     .book-container(v-for='book in books')
-      router-link(:to="{ name: 'book-detail', params: { id: book.id }}")
-        .book-card
-          img.cover(:src='book.image_url', alt='Cover')
-          h1.title {{ book.title }}
-          p.author {{ book.author }}
+      router-link.book-card(:to='`/books/${book.id}`')
+        img.cover(:src='book.image_url' alt='Cover')
+        h1.title
+          | {{ book.title }}
+        p.author 
+          | {{ book.author }}
 </template>
 
 <script>
