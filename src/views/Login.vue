@@ -95,6 +95,7 @@ export default {
   background-color: $transparent;
   border: 2px solid $wolox-green;
   color: $wolox-green;
+  text-align: center;
 }
 
 .error {

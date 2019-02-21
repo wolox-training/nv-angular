@@ -10,18 +10,19 @@
     <p class="error" v-if="!$v.email.email">Email address not valid</p>
     <label class="form-label">Password</label>
     <input class="input" type="password" v-model="password"/>
-    <p class="error" v-if="!$v.password.passwordFormat && password">Password should contain at least one number and one upper case</p>
+    <p class="error" v-if="!$v.password.password && password">Password should contain at least one number and one upper case</p>
     <button type="submit" class="button signup-button" :disabled="$v.$invalid">Sign Up</button>
-    <button class="button login-button" @click="redirectLogin">Login</button>
+    <router-link class="button login-button" to="/login">Login</router-link>
   </form>
 </template>
 
 <script>
 import { email } from 'vuelidate/lib/validators'
-import { createUser } from '../services/UserService.js'
+import { password } from '@/utils/validators'
+import { createUser } from '@/services/UserService'
 
 export default {
-  data () {
+  data() {
     return {
       firstName: null,
       lastName: null,
@@ -31,15 +32,8 @@ export default {
     }
   },
   validations: {
-    email: {
-      email
-    },
-    password: {
-      passwordFormat(value) {
-        const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
-        return re.test(value)
-      }
-    }
+    email: { email },
+    password: { password }
   },
   methods: {
     onSubmit() {
@@ -54,9 +48,6 @@ export default {
         }
       }
       createUser(body)
-    },
-    redirectLogin() {
-      this.$router.push({ name: 'login' })
     }
   }
 }
@@ -101,7 +92,7 @@ export default {
 
   &:after {
     position: absolute;
-    content: " ";
+    content: ' ';
     border: 1px solid $grey;
     width: 100%;
     left: 0;
@@ -118,6 +109,7 @@ export default {
   background-color: $transparent;
   border: 2px solid $wolox-green;
   color: $wolox-green;
+  text-align: center;
 }
 
 .error {

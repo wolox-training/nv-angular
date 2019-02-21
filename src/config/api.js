@@ -1,6 +1,9 @@
-import { create } from 'apisauce'
+import { create } from 'apisauce' 
+
 export const api = create({
-  baseURL: 'https://wbooks-api-stage.herokuapp.com/api/v1',
-  headers: {'Content-Type': 'application/json',
-            Accept: 'application/json'}
+  baseURL: process.env.VUE_APP_API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+    Accept: 'application/json'
+  }
 })

@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Register from './views/Register'
-import Login from './views/Login'
 
 Vue.use(Router)
 
@@ -19,7 +18,7 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: () => import(/* webpackChunkName: "login" */ './views/Login.vue')
     }
   ]
 })
